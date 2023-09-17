@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+/* header */
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    padding-top: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    padding-left: 50px;
+}
+
+ul {
+    display: flex;
+    width: 42%;
+    gap: 15%;
+    margin-left: 58%;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 70px;
+    color: whitesmoke;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* main */
+
+main {
+    padding: 4% 5%;
+    color: whitesmoke;
+}
+
+.head {
+    font-size: 3rem;
+    padding-bottom: 20px;
+    color: whitesmoke;
+}
+
+.bold {
+    color: whitesmoke;
+}
+
+.about {
+    width: 65%;
+    font-size: 1.1rem;
+    color: #c8c6c6;
+}
+
+.container {
+    width: 65%;
+    height: auto;
+    /* background-color: red; */
+    margin-top: 5%;
+    padding-bottom: 10px;
+}
+
+.title {
+    font-size: 2.1rem;
+}
+
+.content {
+    color: #c8c6c6;
+    font-size: 1rem;
+    padding-left: 7%;
+}
+
+.image {
+    padding: 10px 0;
+    width: 960px;
+    height: 675px;
+    border-radius: 10px;
+}
+
+.holder,
+.select {
+    padding: 10px 0;
+}
+
+button {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #c8c6c6;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: whitesmoke;
+}
+
+.feedback,
+.contact {
+    margin-top: 5%;
+    width: 30%;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#feedback,
+#contact {
+    font-size: 2rem;
+    padding-bottom: 5%;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail {
+    margin-bottom: 8%;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 8px;
+    outline: none;
+}
+
+textarea {
+    margin-bottom: 5%;
+    padding-left: 8px;
+    outline: none;
+}
+
+/* Responsive codes */
+
+@media screen and (max-width:1037px) {
+
+    body {
+        overflow-x: hidden;
+        padding-bottom: 15%;
+    }
+
+    nav {
+        position: relative;
+        margin-bottom: 3%;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        margin-left: -50px;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    ul {
+        position: absolute;
+        display: flex;
+        width: 100px;
+        background-color: #c8c6c6;
+        flex-direction: column;
+        right: 0;
+        top: 100%;
+        display: none;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        background-color: whitesmoke;
+    }
+
+    ul li a {
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .head {
+        font-size: 2rem;
+    }
+
+    .about {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .feedback,
+    .contact {
+        width: 100%;
+    }
+
+    #feedback,
+    #contact {
+        font-size: 1.5rem;
+    }
+
+}

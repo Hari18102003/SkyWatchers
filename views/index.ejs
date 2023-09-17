@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+    <h2 class="head">APOD</h2>
+    <p class="about">APOD, short for <b class="bold">"Astronomy Picture of the Day,"</b> is a daily feature provided by
+        NASA that offers a stunning
+        glimpse into the cosmos. Each day, APOD showcases a captivating image related to astronomy or space, along with
+        an informative description written by professional astronomers. These images can range from breathtaking
+        photographs of galaxies, nebulae, and planets to intricate snapshots of celestial events like eclipses and
+        meteor showers.</p>
+
+    <div class="container">
+        <h4 class="title">
+            <%= title %>
+        </h4>
+        <img src=<%=url %> alt="Astronomy Picture of the Day" class="image">
+        <div class="holder">
+            <p class="ch">Explanation : </p>
+            <p class="content">
+                <%= content %>
+            </p>
+        </div>
+        <div class="holder">
+            <span class="d">Date : </span>
+            <span class="date">
+                <%= date %>
+            </span>
+        </div>
+        <form action="/" method="post" class="select">
+            <label for="date">Select Date : </label>
+            <input type="date" name="date">
+            <button type="submit">Travel</button>
+        </form>
+    </div>
+
+    <div class="feedback">
+        <h4 id="feedback">Feedback</h4>
+        <form action="/submit" method="post" class="review">
+            <input type="email" name="email" id="" placeholder="Your Email" class="mail" autocomplete="off">
+            <textarea name="feed" id="" cols="20" rows="3" placeholder="Your reviews.."></textarea>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <div class="contact">
+        <h4 id="contact">Contact</h4>
+        <p>Email : harishnathr@gmail.com</p>
+    </div>
+
+
+
+    <%- include("partials/footer.ejs") %>
