@@ -168,6 +168,10 @@ textarea {
     outline: none;
 }
 
+.error{
+    color: red;
+}
+
 /* Responsive codes */
 
 @media screen and (max-width:1037px) {

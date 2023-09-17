@@ -37,6 +37,7 @@ app.get("/", async (req, res) => {
     }
 });
 
+let err;
 app.post("/", async (req, res) => {
     const date = req.body.date;
     try {
@@ -50,8 +51,20 @@ app.post("/", async (req, res) => {
         });
     }
     catch (error) {
-        console.error(error.message);
-        res.sendStatus(500);
+
+        const response = await axios.get(url + "?date=" + todayDate + "&api_key=" + api_key);
+        const result = response.data;
+        const tt = result.title;
+        const dd = result.date;
+        const cc = result.explanation;
+        const image_url = result.url;
+        res.render("index.ejs", {
+            title: tt,
+            content: cc,
+            date: dd,
+            url: image_url,
+            err: "Date must be between 1995-06-16 and "+todayDate+"."
+        });
     }
 });
 
