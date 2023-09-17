@@ -31,8 +31,10 @@
             <button type="submit">Travel</button>
         </form>
         <% if(locals.err){ %>
-            <p class="error"><%= err %></p>
-        <% } %>
+            <p class="error">
+                <%= err %>
+            </p>
+            <% } %>
     </div>
 
     <div class="feedback">

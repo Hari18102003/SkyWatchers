@@ -63,7 +63,7 @@ app.post("/", async (req, res) => {
             content: cc,
             date: dd,
             url: image_url,
-            err: "Date must be between 1995-06-16 and "+todayDate+"."
+            err: "Date must be between 1995-06-16 and " + todayDate + "."
         });
     }
 });
