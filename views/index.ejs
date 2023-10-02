@@ -39,10 +39,10 @@
 
     <div class="feedback">
         <h4 id="feedback">Feedback</h4>
-        <form action="/submit" method="post" class="review">
-            <input type="email" name="email" id="" placeholder="Your Email" class="mail" autocomplete="off">
-            <textarea name="feed" id="" cols="20" rows="3" placeholder="Your reviews.."></textarea>
-            <button type="submit">submit</button>
+        <form class="review">
+            <input type="email" name="email" id="" placeholder="Your Email" class="mail" autocomplete="off" required>
+            <textarea name="feed" id="" cols="20" rows="3" placeholder="Your reviews.." class="textarea" required></textarea>
+            <button type="button" onclick="emailMe()">submit</button>
         </form>
     </div>
 

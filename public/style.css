@@ -166,6 +166,7 @@ textarea {
     margin-bottom: 5%;
     padding-left: 8px;
     outline: none;
+    resize: none;
 }
 
 .error {

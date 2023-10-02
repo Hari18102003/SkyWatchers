@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const url = "https://api.nasa.gov/planetary/apod";
 const api_key = "Ke84fc3H4eVlctR1xTKQErIaKsJNFpslVgBzWMtd";
 
