@@ -1,11 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-const url = "https://api.nasa.gov/planetary/apod";
-const api_key = "Ke84fc3H4eVlctR1xTKQErIaKsJNFpslVgBzWMtd";
+const url = process.env.API_URL;
+const api_key = process.env.API_KEY;
 
 const today = new Date();
 const year = today.getFullYear();
